@@ -32,7 +32,7 @@ function HomePage() {
   return (
     <>
       {/* Hero Section (Home) */}
-      <section id="about" className="bg-gradient-to-br from-blue-700 via-blue-500/90 via-60% to-white py-24 flex items-center justify-center min-h-[60vh]" data-aos="fade-up">
+      <section id="about" className="bg-gradient-to-br from-blue-700 via-blue-500/90 via-60% to-white py-12 flex items-center justify-center min-h-[40vh]" data-aos="fade-up">
         <div className="flex flex-col md:flex-row items-center justify-center w-full px-4 max-w-5xl mx-auto gap-10 md:gap-16">
           <img src={headshot} alt="Professional Headshot" className="w-56 h-56 rounded-full shadow-2xl border-4 border-white object-cover object-center mb-8 md:mb-0 transform transition-transform duration-300 hover:-translate-y-4" style={{objectPosition: 'center 30%'}} data-aos="zoom-in" data-aos-delay="200" />
           <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
@@ -104,23 +104,6 @@ function HomePage() {
           <div className="flex justify-center">
             <div className="transition-all duration-300 rounded-2xl p-1 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-700 shadow-xl hover:shadow-blue-400/60 hover:scale-105">
               <img src={partners} alt="Partner Logos" className="w-full max-w-4xl object-contain rounded-xl bg-white" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-400" data-aos="fade-up">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-extrabold text-center mb-16 text-white">What Clients Say</h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-white rounded-3xl shadow-xl p-10 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-              <p className="text-lg text-gray-700 mb-6">“Absolutely the best insurance experience I've ever had. Professional, responsive, and truly cares about clients!”</p>
-              <span className="font-semibold text-blue-700">Sarah T.</span>
-            </div>
-            <div className="bg-white rounded-3xl shadow-xl p-10 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
-              <p className="text-lg text-gray-700 mb-6">“I feel so much more secure about my family's future. Highly recommend to anyone looking for real peace of mind.”</p>
-              <span className="font-semibold text-blue-700">James R.</span>
             </div>
           </div>
         </div>
@@ -222,7 +205,7 @@ function ApplyPage() {
             </div>
             <div className="flex items-start gap-3">
               <span className="mt-1 text-2xl text-blue-600">✔️</span>
-              <span><b>Step 3:</b> Run appointments and start selling!</span>
+              <span><b>Step 3:</b> Run appointments and start protecting families!</span>
             </div>
             <div className="ml-8 mt-2 text-base italic text-blue-500">*Your first few appointments you will be partnered with a senior broker to help you if needed*</div>
           </div>
@@ -260,7 +243,6 @@ function ReferralPage() {
               <div className="text-center">
                 <h2 className="text-xl font-bold text-gray-800 mb-1">Mike Alfieri</h2>
                 <div className="text-gray-500 mb-2">Insurance Broker®</div>
-                <div className="italic text-gray-600 mb-2">Safe Retirement Specialist<br /></div>
                 <div className="flex flex-col gap-1 text-gray-700 text-sm items-center mb-2">
                   <div className="flex items-center gap-2"><span>📞</span> (503) 764-5097 (call or text)</div>
                   <div className="flex items-center gap-2"><span>✉️</span> michaelalfieri.ffl@gmail.com</div>
@@ -407,8 +389,21 @@ function App() {
         <nav className="bg-white shadow-md sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex justify-between h-20 items-center">
-              <Link to="/" className="text-2xl font-extrabold text-blue-700 tracking-tight hover:text-blue-900 transition" style={{ textDecoration: 'none' }}>
-                Insurance Pro
+              <Link to="/" className="text-2xl font-extrabold text-blue-700 tracking-tight hover:text-blue-900 transition flex items-center gap-2" style={{ textDecoration: 'none' }}>
+                InsurePro
+                {/* Sleek insurance logo: shield with checkmark */}
+                <span className="ml-2">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="shieldGradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#2563eb" />
+                        <stop offset="1" stopColor="#60a5fa" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M16 4L27 8V15C27 23 16 28 16 28C16 28 5 23 5 15V8L16 4Z" fill="url(#shieldGradient)" stroke="#1e40af" strokeWidth="2"/>
+                    <path d="M12 16.5L15 19.5L20 13.5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
               </Link>
               {/* Desktop Nav */}
               <div className="hidden md:flex items-center">
@@ -475,7 +470,7 @@ function App() {
             {/* Brand & Tagline */}
             <div className="flex-1 text-center md:text-left mb-8 md:mb-0">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                <span className="text-3xl font-extrabold text-blue-400 tracking-tight">Insurance Pro</span>
+                <span className="text-3xl font-extrabold text-blue-400 tracking-tight">InsurePro</span>
                 <span className="inline-block bg-blue-700 text-white text-xs px-3 py-1 rounded-full font-semibold ml-2">Licensed & Insured</span>
               </div>
               <div className="text-lg text-gray-400 font-medium">Your trusted insurance partner</div>
@@ -500,8 +495,8 @@ function App() {
                   <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.322-.592 1.322-1.324v-21.35c0-.733-.592-1.325-1.325-1.325z"/></svg>
                 </a>
               </div>
-              <div className="text-xs text-gray-500 mb-2">&copy; {new Date().getFullYear()} Insurance Pro. All rights reserved.</div>
-              <div className="text-xs text-gray-500">Powered by Insurance Pro Technologies</div>
+              <div className="text-xs text-gray-500 mb-2">&copy; {new Date().getFullYear()} InsurePro. All rights reserved.</div>
+              <div className="text-xs text-gray-500">Powered by InsurePro Technologies</div>
             </div>
           </div>
         </footer>
