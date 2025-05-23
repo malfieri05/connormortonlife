@@ -1,0 +1,13 @@
+<script>
+(function(){
+  if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+    window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+    var e=document.createElement("script");
+    e.src="https://www.chatbase.co/embed.min.js";
+    e.async=true;
+    document.head.appendChild(e);
+  }
+  window.chatbase('init', { chatbotId: 'YuEdJoJnuX7Q3aI0Ldrya' });
+})();
+</script>
+</body> 
