@@ -388,53 +388,75 @@ function App() {
         {/* Navigation */}
         <nav className="bg-white shadow-md sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex justify-between h-20 items-center">
-              <Link to="/" className="text-2xl font-extrabold text-blue-700 tracking-tight hover:text-blue-900 transition flex items-center gap-2" style={{ textDecoration: 'none' }}>
-                InsurePro
-                {/* Sleek insurance logo: shield with checkmark */}
-                <span className="ml-2">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <linearGradient id="shieldGradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#2563eb" />
-                        <stop offset="1" stopColor="#60a5fa" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M16 4L27 8V15C27 23 16 28 16 28C16 28 5 23 5 15V8L16 4Z" fill="url(#shieldGradient)" stroke="#1e40af" strokeWidth="2"/>
-                    <path d="M12 16.5L15 19.5L20 13.5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
-              </Link>
-              {/* Desktop Nav */}
-              <div className="hidden md:flex items-center">
-                {NAV_LINKS.map((link, idx) => (
-                  <React.Fragment key={link.to}>
-                    {idx !== 0 && (
-                      <span className="mx-3 text-gray-300 text-lg select-none">|</span>
-                    )}
-                    <Link
-                      to={link.to}
-                      className={`font-medium transition px-2 py-1 rounded relative
-                        ${activePath === link.to ? 'text-blue-700 bg-blue-100 shadow-md' : 'text-gray-700 hover:text-blue-700 hover:bg-blue-100 hover:shadow-md'}
-                        duration-200 ease-in-out
-                      `}
-                      style={{ display: 'inline-block' }}
-                    >
-                      {link.label}
-                    </Link>
-                  </React.Fragment>
-                ))}
-              </div>
-              {/* Mobile Hamburger */}
-              <button
-                className="md:hidden flex items-center justify-center w-10 h-10 rounded hover:bg-gray-100 focus:outline-none"
-                onClick={() => setIsMenuOpen(v => !v)}
-                aria-label="Open menu"
+            <div className="flex flex-col w-full">
+              {/* Mobile Phone Number Banner */}
+              <a
+                href="tel:5037645097"
+                className="md:hidden flex justify-center items-center font-semibold text-blue-700 bg-blue-50 py-2 w-full shadow-sm text-lg tracking-wide border-b border-blue-100"
+                style={{ textDecoration: 'none' }}
               >
-                <svg className="w-7 h-7 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                {/* Simple phone icon */}
+                <svg className="w-5 h-5 mr-2 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13 1.05.37 2.06.72 3a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.94.35 1.95.59 3 .72A2 2 0 0122 16.92z" />
                 </svg>
-              </button>
+                (503) 764-5097
+              </a>
+              {/* Main Nav Row */}
+              <div className="flex justify-between h-20 items-center w-full">
+                <Link to="/" className="text-2xl font-extrabold text-blue-700 tracking-tight hover:text-blue-900 transition flex items-center gap-2" style={{ textDecoration: 'none' }}>
+                  InsurePro
+                  {/* Sleek insurance logo: shield with checkmark */}
+                  <span className="ml-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="shieldGradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#2563eb" />
+                          <stop offset="1" stopColor="#60a5fa" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M16 4L27 8V15C27 23 16 28 16 28C16 28 5 23 5 15V8L16 4Z" fill="url(#shieldGradient)" stroke="#1e40af" strokeWidth="2"/>
+                      <path d="M12 16.5L15 19.5L20 13.5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                </Link>
+                {/* Desktop Nav */}
+                <div className="hidden md:flex items-center">
+                  {NAV_LINKS.map((link, idx) => (
+                    <React.Fragment key={link.to}>
+                      {idx !== 0 && (
+                        <span className="mx-3 text-gray-300 text-lg select-none">|</span>
+                      )}
+                      <Link
+                        to={link.to}
+                        className={`font-medium transition px-2 py-1 rounded relative
+                          ${activePath === link.to ? 'text-blue-700 bg-blue-100 shadow-md' : 'text-gray-700 hover:text-blue-700 hover:bg-blue-100 hover:shadow-md'}
+                          duration-200 ease-in-out
+                        `}
+                        style={{ display: 'inline-block' }}
+                      >
+                        {link.label}
+                      </Link>
+                    </React.Fragment>
+                  ))}
+                  <a
+                    href="tel:5037645097"
+                    className="hidden md:inline-block font-semibold text-blue-700 bg-blue-50 px-5 py-2 rounded-full shadow hover:bg-blue-100 transition ml-6 text-lg tracking-wide"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    (503) 764-5097
+                  </a>
+                </div>
+                {/* Mobile Hamburger */}
+                <button
+                  className="md:hidden flex items-center justify-center w-10 h-10 rounded hover:bg-gray-100 focus:outline-none"
+                  onClick={() => setIsMenuOpen(v => !v)}
+                  aria-label="Open menu"
+                >
+                  <svg className="w-7 h-7 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           {/* Mobile Menu */}
