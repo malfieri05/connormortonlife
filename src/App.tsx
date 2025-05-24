@@ -34,7 +34,7 @@ function HomePage() {
       {/* Hero Section (Home) */}
       <section id="about" className="bg-gradient-to-br from-blue-700 via-blue-500/90 via-60% to-white py-12 flex items-center justify-center min-h-[40vh]" data-aos="fade-up">
         <div className="flex flex-col md:flex-row items-center justify-center w-full px-4 max-w-5xl mx-auto gap-10 md:gap-16">
-          <img src={headshot} alt="Professional Headshot" className="w-56 h-56 rounded-full shadow-2xl border-4 border-white object-cover object-center mb-8 md:mb-0 transform transition-transform duration-300 hover:-translate-y-4" style={{objectPosition: 'center 30%'}} data-aos="zoom-in" data-aos-delay="200" />
+          <img src={headshot} alt="Professional Headshot" className="w-72 h-72 rounded-full shadow-2xl border-4 border-white object-cover object-center mb-8 md:mb-0 transform scale-125 transition-transform duration-300 hover:-translate-y-4" style={{objectPosition: 'left 5%'}} data-aos="zoom-in" data-aos-delay="200" />
           <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
             <h1 className="text-white text-4xl md:text-5xl font-extrabold tracking-tight mb-2 drop-shadow font-sans">Michael V. Alfieri</h1>
             <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-4 drop-shadow font-sans">Secure Your Future Today.</h2>
