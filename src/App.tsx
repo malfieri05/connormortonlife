@@ -36,7 +36,7 @@ function HomePage() {
         <div className="flex flex-col md:flex-row items-center justify-center w-full px-4 max-w-5xl mx-auto gap-10 md:gap-16">
           <img src={headshot} alt="Professional Headshot" className="w-56 h-56 rounded-full shadow-2xl border-4 border-white object-cover object-center mb-8 md:mb-0 transform transition-transform duration-300 hover:-translate-y-4" style={{objectPosition: 'center 30%'}} data-aos="zoom-in" data-aos-delay="200" />
           <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
-            <h1 className="text-white text-4xl md:text-5xl font-extrabold tracking-tight mb-2 drop-shadow font-sans">Mike Alfieri</h1>
+            <h1 className="text-white text-4xl md:text-5xl font-extrabold tracking-tight mb-2 drop-shadow font-sans">Michael V. Alfieri</h1>
             <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-4 drop-shadow font-sans">Secure Your Future Today.</h2>
             <p className="text-white text-2xl mb-8 font-light drop-shadow max-w-2xl">Work with an industry-leading insurance agent you can trust.</p>
             <Link
@@ -241,7 +241,7 @@ function ReferralPage() {
             <div className="flex-1 max-w-md w-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl shadow-lg p-6 flex flex-col items-center">
               <img src={headshot} alt="Your Headshot" className="w-28 h-28 rounded-full border-4 border-white shadow mb-4 object-cover object-center mx-auto" style={{ objectPosition: 'center 30%' }} />
               <div className="text-center">
-                <h2 className="text-xl font-bold text-gray-800 mb-1">Mike Alfieri</h2>
+                <h2 className="text-xl font-bold text-gray-800 mb-1">Michael V. Alfieri</h2>
                 <div className="text-gray-500 mb-2">Insurance Broker®</div>
                 <div className="flex flex-col gap-1 text-gray-700 text-sm items-center mb-2">
                   <div className="flex items-center gap-2"><span>📞</span> (503) 764-5097 (call or text)</div>
