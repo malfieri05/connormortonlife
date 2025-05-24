@@ -1,5 +1,5 @@
 // @ts-ignore: PNG import for Vite
-import headshot from './assets/headshot.png'
+import headshot from './assets/Headshot2.png'
 // @ts-ignore: PNG import for Vite
 import partners from './assets/partners.png'
 import React, { useEffect, useState } from 'react'
