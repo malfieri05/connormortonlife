@@ -7,6 +7,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Link, Routes, Route, useLocation } from 'react-router-dom'
 import ChatbaseWidget from './ChatbaseWidget'
+import FinalExpensePage from './pages/FinalExpensePage'
 
 // Page components
 function CenteredNotification({ show, message, onClose }: { show: boolean, message: string, onClose: () => void }) {
@@ -56,9 +57,9 @@ function HomePage() {
       <section id="services" className="py-24 bg-white" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-extrabold text-center mb-16 text-blue-700">Our Services</h2>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
             {/* Whole Life / Term Insurance */}
-            <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600" data-aos="fade-up" data-aos-delay="100">
+            <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600 h-full" data-aos="fade-up" data-aos-delay="100">
               <div className="mb-6 text-blue-700">
                 {/* Shield Heart Icon */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M12 4l7 4v4c0 5-3.5 9-7 9s-7-4-7-9V8l7-4z" /><path d="M9.5 13.5l2.5 2.5 2.5-2.5a2 2 0 10-2.5-2.5 2 2 0 10-2.5 2.5z" /></svg>
@@ -67,16 +68,18 @@ function HomePage() {
               <p className="text-gray-600">Flexible, lifelong or term-based coverage to protect your loved ones and build financial security.</p>
             </div>
             {/* Final Expense Plans */}
-            <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600" data-aos="fade-up" data-aos-delay="200">
-              <div className="mb-6 text-blue-700">
-                {/* Two Hands Together Icon */}
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M8.5 14.5l-3-3a2 2 0 112.8-2.8l2.7 2.7M15.5 14.5l3-3a2 2 0 10-2.8-2.8l-2.7 2.7" /><path d="M12 19v-7" /><path d="M8.5 14.5L12 19l3.5-4.5" /></svg>
+            <Link to="/final-expense" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600 h-full" data-aos="fade-up" data-aos-delay="200">
+                <div className="mb-6 text-blue-700">
+                  {/* Two Hands Together Icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M8.5 14.5l-3-3a2 2 0 112.8-2.8l2.7 2.7M15.5 14.5l3-3a2 2 0 10-2.8-2.8l-2.7 2.7" /><path d="M12 19v-7" /><path d="M8.5 14.5L12 19l3.5-4.5" /></svg>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-black">Final Expense Plans</h3>
+                <p className="text-gray-600">Affordable plans designed to cover funeral costs and final expenses, easing the burden on your family.</p>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-black">Final Expense Plans</h3>
-              <p className="text-gray-600">Affordable plans designed to cover funeral costs and final expenses, easing the burden on your family.</p>
-            </div>
+            </Link>
             {/* Retirement Planning */}
-            <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600" data-aos="fade-up" data-aos-delay="300">
+            <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600 h-full" data-aos="fade-up" data-aos-delay="300">
               <div className="mb-6 text-blue-700">
                 {/* Stair Steps Icon */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><rect x="4" y="16" width="4" height="4" rx="1" /><rect x="10" y="12" width="4" height="8" rx="1" /><rect x="16" y="8" width="4" height="12" rx="1" /></svg>
@@ -85,7 +88,7 @@ function HomePage() {
               <p className="text-gray-600">Secure your golden years with our retirement solutions.</p>
             </div>
             {/* Asset Protection */}
-            <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600" data-aos="fade-up" data-aos-delay="400">
+            <div className="p-10 bg-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition flex flex-col items-center text-center border-t-4 border-blue-600 h-full" data-aos="fade-up" data-aos-delay="400">
               <div className="mb-6 text-blue-700">
                 {/* Lock Icon */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><rect x="6" y="11" width="12" height="8" rx="2" /><path d="M9 11V7a3 3 0 016 0v4" /></svg>
@@ -385,22 +388,21 @@ function App() {
     <>
       <ChatbaseWidget />
       <div className="min-h-screen bg-gray-50 font-sans">
+        {/* Mobile Phone Number Banner */}
+        <a
+          href="tel:5037645097"
+          className="flex md:hidden justify-center items-center font-semibold text-blue-700 bg-blue-50 py-2 w-full shadow-sm text-lg tracking-wide border-b border-blue-100"
+          style={{ textDecoration: 'none' }}
+        >
+          <svg className="w-5 h-5 mr-2 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13 1.05.37 2.06.72 3a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.94.35 1.95.59 3 .72A2 2 0 0122 16.92z" />
+          </svg>
+          (503) 764-5097
+        </a>
         {/* Navigation */}
         <nav className="bg-white shadow-md sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col w-full">
-              {/* Mobile Phone Number Banner */}
-              <a
-                href="tel:5037645097"
-                className="md:hidden flex justify-center items-center font-semibold text-blue-700 bg-blue-50 py-2 w-full shadow-sm text-lg tracking-wide border-b border-blue-100"
-                style={{ textDecoration: 'none' }}
-              >
-                {/* Simple phone icon */}
-                <svg className="w-5 h-5 mr-2 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13 1.05.37 2.06.72 3a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.94.35 1.95.59 3 .72A2 2 0 0122 16.92z" />
-                </svg>
-                (503) 764-5097
-              </a>
               {/* Main Nav Row */}
               <div className="flex justify-between h-20 items-center w-full">
                 <Link to="/" className="text-2xl font-extrabold text-blue-700 tracking-tight hover:text-blue-900 transition flex items-center gap-2" style={{ textDecoration: 'none' }}>
@@ -485,6 +487,7 @@ function App() {
           <Route path="/apply" element={<ApplyPage />} />
           <Route path="/referral" element={<ReferralPage />} />
           <Route path="/schedule" element={<SchedulePage />} />
+          <Route path="/final-expense" element={<FinalExpensePage />} />
         </Routes>
         {/* Professional Footer */}
         <footer className="bg-black text-gray-200 border-t border-gray-800 pt-12 pb-8 mt-16">
