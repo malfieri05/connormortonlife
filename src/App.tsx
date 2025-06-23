@@ -1,5 +1,5 @@
 // @ts-ignore: PNG import for Vite
-import headshot from './assets/headshot2.png'
+import headshot from './assets/headshot.png'
 // @ts-ignore: PNG import for Vite
 import partners from './assets/partners.png'
 import React, { useEffect, useState } from 'react'
@@ -28,16 +28,14 @@ function CenteredNotification({ show, message, onClose }: { show: boolean, messa
 }
 
 function HomePage() {
-  const [showNotif, setShowNotif] = useState(false);
-
   return (
     <>
       {/* Hero Section (Home) */}
       <section id="about" className="bg-gradient-to-br from-blue-700 via-blue-500/90 via-60% to-white py-12 flex items-center justify-center min-h-[40vh]" data-aos="fade-up">
         <div className="flex flex-col md:flex-row items-center justify-center w-full px-4 max-w-5xl mx-auto gap-10 md:gap-16">
-          <img src={headshot} alt="Professional Headshot" className="w-72 h-72 rounded-full shadow-2xl border-4 border-white object-cover object-center mb-8 md:mb-0 transform scale-125 transition-transform duration-300 hover:-translate-y-4" style={{objectPosition: 'left 5%'}} data-aos="zoom-in" data-aos-delay="200" />
+          <img src={headshot} alt="Professional Headshot" className="w-72 h-72 rounded-full shadow-2xl border-4 border-white object-cover object-center mb-8 md:mb-0 transform scale-[1.8] transition-transform duration-300 hover:-translate-y-4" style={{objectPosition: 'center 10%'}} data-aos="zoom-in" data-aos-delay="200" />
           <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
-            <h1 className="text-white text-4xl md:text-5xl font-extrabold tracking-tight mb-2 drop-shadow font-sans">Michael V. Alfieri</h1>
+            <h1 className="text-white text-4xl md:text-5xl font-extrabold tracking-tight mb-2 drop-shadow font-sans">Connor S. Morton</h1>
             <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-4 drop-shadow font-sans">Secure Your Future Today.</h2>
             <p className="text-white text-2xl mb-8 font-light drop-shadow max-w-2xl">Work with an industry-leading insurance agent you can trust.</p>
             <Link
@@ -111,81 +109,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-white" data-aos="fade-up">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl font-extrabold text-center mb-12 text-blue-700">Contact Me</h2>
-          <div className="bg-gray-50 rounded-3xl shadow-xl p-10">
-            <p className="text-gray-700 text-center mb-8 text-lg">Your information is 100% confidential. I'll get back to you within 24 hours.</p>
-            <form
-              className="space-y-6"
-              onSubmit={async (e) => {
-                e.preventDefault();
-                const form = e.target as HTMLFormElement;
-                const data = {
-                  name: (form.elements.namedItem('name') as HTMLInputElement)?.value,
-                  email: (form.elements.namedItem('email') as HTMLInputElement)?.value,
-                  message: (form.elements.namedItem('message') as HTMLInputElement)?.value,
-                };
-                const response = await fetch('https://formspree.io/f/meogwrdk', {
-                  method: 'POST',
-                  headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify(data),
-                });
-                if (response.ok) {
-                  setShowNotif(true);
-                  form.reset();
-                } else {
-                  alert('There was a problem submitting your form.');
-                }
-              }}
-            >
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="mt-1 block w-full rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-3 text-lg bg-white"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="mt-1 block w-full rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-3 text-lg bg-white"
-                  placeholder="you@email.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1">Message</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="mt-1 block w-full rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-3 text-lg bg-white"
-                  placeholder="How can I help you?"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-bold text-lg shadow transition duration-300"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-      <CenteredNotification
-        show={showNotif}
-        message="Message sent!"
-        onClose={() => setShowNotif(false)}
-      />
     </>
   );
 }
@@ -213,7 +136,7 @@ function ApplyPage() {
             <div className="ml-8 mt-2 text-base italic text-blue-500">*Your first few appointments you will be partnered with a senior broker to help you if needed*</div>
           </div>
           <a
-            href="https://calendly.com/mikealfieri/30min"
+            href="https://calendly.com/connor-morton17/15min"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-xl shadow hover:scale-105 hover:shadow-blue-400 transition mb-2 inline-block"
@@ -241,17 +164,20 @@ function ReferralPage() {
               <p className="text-lg md:text-xl mb-4 text-gray-800">Please answer each question carefully and thoroughly. If you would like to send more than 5 referrals please complete another form and submit it.</p>
             </div>
             {/* Right: Business Card */}
-            <div className="flex-1 max-w-md w-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl shadow-lg p-6 flex flex-col items-center">
-              <img src={headshot} alt="Your Headshot" className="w-28 h-28 rounded-full border-4 border-white shadow mb-4 object-cover object-center mx-auto" style={{ objectPosition: 'center 30%' }} />
-              <div className="text-center">
-                <h2 className="text-xl font-bold text-gray-800 mb-1">Michael V. Alfieri</h2>
+            <div className="flex-1 max-w-md w-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl shadow-lg p-6 flex flex-col items-center mt-12 relative">
+              {/* Centered Headshot */}
+              <div className="absolute left-1/2 -translate-x-1/2 -top-16 z-10 flex flex-col items-center w-full">
+                <img src={headshot} alt="Your Headshot" className="w-36 h-36 rounded-full border-4 border-white shadow object-cover object-center" style={{ objectPosition: 'center 10%' }} />
+              </div>
+              {/* Card Content with extra top margin for image overlap */}
+              <div className="text-center mt-20 flex flex-col items-center w-full">
+                <h2 className="text-xl font-bold text-gray-800 mb-1">Connor S. Morton</h2>
                 <div className="text-gray-500 mb-2">Insurance Broker®</div>
                 <div className="flex flex-col gap-1 text-gray-700 text-sm items-center mb-2">
-                  <div className="flex items-center gap-2"><span>📞</span> (503) 764-5097 (call or text)</div>
-                  <div className="flex items-center gap-2"><span>✉️</span> michaelalfieri.ffl@gmail.com</div>
+                  <div className="flex items-center gap-2"><span>📞</span> (541) 912-2048 (call or text)</div>
+                  <div className="flex items-center gap-2"><span>✉️</span> connormorton.ffl@gmail.com</div>
                 </div>
-                <div className="mt-4 flex justify-center">
-                </div>
+                <div className="mt-4 flex justify-center"></div>
               </div>
             </div>
           </div>
@@ -357,7 +283,7 @@ function SchedulePage() {
         <p className="text-lg text-gray-700 mb-0">Schedule a call or video meeting to discuss your needs.</p>
         <div 
           className="calendly-inline-widget mx-auto" 
-          data-url="https://calendly.com/mikealfieri/30min"
+          data-url="https://calendly.com/connor-morton17/15min"
           style={{ width: '100vw', minWidth: '320px', height: '700px' }}
         />
       </div>
@@ -390,14 +316,14 @@ function App() {
       <div className="min-h-screen bg-gray-50 font-sans">
         {/* Mobile Phone Number Banner */}
         <a
-          href="tel:5037645097"
+          href="tel:5419122048"
           className="flex md:hidden justify-center items-center font-semibold text-blue-700 bg-blue-50 py-2 w-full shadow-sm text-lg tracking-wide border-b border-blue-100"
           style={{ textDecoration: 'none' }}
         >
           <svg className="w-5 h-5 mr-2 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13 1.05.37 2.06.72 3a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.94.35 1.95.59 3 .72A2 2 0 0122 16.92z" />
           </svg>
-          (503) 764-5097
+          (541) 912-2048
         </a>
         {/* Navigation */}
         <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -441,11 +367,11 @@ function App() {
                     </React.Fragment>
                   ))}
                   <a
-                    href="tel:5037645097"
+                    href="tel:5419122048"
                     className="hidden md:inline-block font-semibold text-blue-700 bg-blue-50 px-5 py-2 rounded-full shadow hover:bg-blue-100 transition ml-6 text-lg tracking-wide"
                     style={{ textDecoration: 'none' }}
                   >
-                    (503) 764-5097
+                    (541) 912-2048
                   </a>
                 </div>
                 {/* Mobile Hamburger */}
@@ -503,8 +429,8 @@ function App() {
             {/* Contact Info */}
             <div className="flex-1 text-center md:text-left mb-8 md:mb-0">
               <h4 className="text-xl font-bold text-white mb-2">Contact Info</h4>
-              <div className="text-gray-300 text-base font-medium">Email: <a href="mailto:michaelalfieri.ffl@gmail.com" className="hover:text-blue-400 transition">michaelalfieri.ffl@gmail.com</a></div>
-              <div className="text-gray-300 text-base font-medium">Phone: <a href="tel:5037645097" className="hover:text-blue-400 transition">(503) 764-5097</a></div>
+              <div className="text-gray-300 text-base font-medium">Email: <a href="mailto:connormorton.ffl@gmail.com" className="hover:text-blue-400 transition">connormorton.ffl@gmail.com</a></div>
+              <div className="text-gray-300 text-base font-medium">Phone: <a href="tel:5419122048" className="hover:text-blue-400 transition">(541) 912-2048</a></div>
             </div>
             {/* Social & Legal */}
             <div className="flex-1 text-center md:text-right flex flex-col items-center md:items-end">

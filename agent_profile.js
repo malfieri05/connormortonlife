@@ -1,6 +1,6 @@
 const agentProfile = {
-    name: "Michael V. Alfieri",
-    nicknames: ["Mike", "Mikey"],
+    name: "Connor S. Morton",
+    nicknames: ["Connor", "Con"],
     professionalBackground: {
         currentRole: "Industry Leading Insurance Agent",
         expertise: [

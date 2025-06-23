@@ -263,7 +263,7 @@ const FinalExpensePage: React.FC = () => {
         <div className="flex-1 bg-gray-50 rounded-3xl shadow-xl p-8 flex flex-col items-center justify-center gap-6 text-center">
           <h2 className="text-2xl font-extrabold text-blue-700 mb-2">Want expert guidance?</h2>
           <p className="text-lg text-gray-700 mb-4">Click below to talk to an agent and get personalized help right away.</p>
-          <a href="tel:+15037645097" className="w-full max-w-xs bg-blue-700 text-white py-4 rounded-xl font-bold text-xl hover:bg-blue-800 transition flex items-center justify-center gap-2 shadow-lg">
+          <a href="tel:+15419122048" className="w-full max-w-xs bg-blue-700 text-white py-4 rounded-xl font-bold text-xl hover:bg-blue-800 transition flex items-center justify-center gap-2 shadow-lg">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.52l.3 1.2a2 2 0 01-.45 1.95l-1.1 1.1a16.06 16.06 0 006.36 6.36l1.1-1.1a2 2 0 011.95-.45l1.2.3A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" /></svg>
             Call Now
           </a>
