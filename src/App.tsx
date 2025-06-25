@@ -194,7 +194,7 @@ function ReferralPage() {
                   if (el.name) data[el.name] = el.value;
                 }
               });
-              const response = await fetch('https://formspree.io/f/meogwrdk', {
+              const response = await fetch('https://formspree.io/f/mjkrpaeq', {
                 method: 'POST',
                 headers: {
                   'Accept': 'application/json',
